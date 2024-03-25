@@ -1,0 +1,239 @@
+@use "sass:math";
+@import "./variables.scss";
+
+// Local para os estilos de classes globais comuns a diversas telas
+
+//****************************************************************************START_HEADER****************************************************************************
+//**********************Titular**************************
+.secao-titular {
+  padding: 20px 0px;
+}
+
+.titular-logo {
+  display: flex;
+  align-items: center;
+  border-right: 5px solid #4472c4;
+  height: 78px;
+}
+.titular-logo img {
+  width: 50px;
+  height: 52px;
+  margin: 0 auto;
+}
+
+.titular-dados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+}
+.titular-dados h5 {
+  font-weight: 700;
+  margin: 0;
+}
+.titular-dados p {
+  text-align: center;
+  margin: 0;
+}
+
+@media (min-width: 490px) {
+  #Secao-titular {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .titular-logo img {
+    width: 70px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 700px) {
+  .secao-titular {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+//**********************Subtítulo**************************
+.container-subtitulo {
+  background-color: #d9d9d9;
+}
+.container-subtitulo h1 {
+  margin-bottom: 0;
+}
+//****************************************************************************END_HEADER******************************************************************************
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.margin-padding-l {
+  padding-left: 10px;
+}
+
+.margin-padding-r {
+  padding-right: 10px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+input.form-control {
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #ced4daff;
+
+  &::placeholder,
+  &.placeholder {
+    color: $softGrey-color;
+    font-weight: 100;
+  }
+}
+
+input[type="radio"] {
+  flex-shrink: 0;
+
+  &,
+  & + Label {
+    cursor: pointer;
+  }
+}
+
+.form-control,
+.formContent {
+  color: black;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-width: 1px;
+}
+
+textarea {
+  resize: none;
+}
+
+.formContent {
+  border: 1px solid transparent;
+}
+
+label {
+  color: $grey-color;
+  font-size: 13.5px;
+  font-weight: 600;
+  //   padding: 0px 9.5px;
+}
+
+.form-check-label {
+  padding: 0px;
+}
+
+.title {
+  margin-top: math.div($base-pageDivider, 2);
+  margin-bottom: math.div($base-pageDivider, 2);
+}
+
+.title + .page {
+  margin-top: 0 !important;
+}
+
+.container {
+  &.page {
+    max-width: 1086px;
+    margin-top: $base-pageDivider;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 1220px) {
+    &.page {
+      max-width: 910px;
+    }
+  }
+
+  @media (max-width: 990px) {
+    &.page {
+      max-width: 95%;
+    }
+  }
+}
+
+small {
+  font-size: 0.876rem;
+  &.x2,
+  .x2 {
+    font-size: 0.798rem;
+    font-weight: 700;
+  }
+}
+
+.Toastify__toast-container {
+  display: table;
+}
+
+#raiz {
+  position: fixed;
+  background: $grayTransparent-color;
+  width: 100%;
+  z-index: 3;
+  &.hide {
+    height: 0;
+    opacity: 0;
+    -webkit-transition:
+      opacity 0.8s,
+      height 0.8s step-end;
+    -moz-transition:
+      opacity 0.8s,
+      height 0.8s step-end;
+    transition:
+      opacity 0.8s,
+      height 0.8s step-end;
+  }
+  &.show {
+    height: 100%;
+    opacity: 1;
+    -webkit-transition: opacity 0.8s;
+    -moz-transition: opacity 0.8s;
+    transition: opacity 0.8s;
+  }
+}
+
+.form-check-input:focus {
+  box-shadow: none;
+}
+
+//********************** Botões **************************
+.btn-cancelar {
+  color: #1d1d1d;
+  // background-color: #e0e0e0;
+  background-color: #f9f8f6;
+  border-color: #1d1d1d;
+}
+.btn-cancelar:hover {
+  color: #1d1d1d;
+  background-color: #c1c1c1;
+}
+
+//********************** Footer **************************
+.footer-copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+@media (max-height: 450px) {
+  .footer-copyright {
+    margin-top: 100px;
+    font-size: 12px;
+    line-height: 35px;
+    clear: both;
+    position: relative;
+  }
+}

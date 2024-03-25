@@ -1,0 +1,42 @@
+//********************** Botões **************************
+.secao-container-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+}
+.btn-login{
+    color: #1d1d1d;
+    background-color: rgb(39, 159, 47);
+    border-color: #1d1d1d;
+}
+.btn-login:hover {
+    color: #1d1d1d;
+    background-color: rgb(27, 217, 40);
+    border-color: #1d1d1d;
+}
+
+@media (max-width: 700px) {
+    .secao-container-home {
+        padding: 20px 0px;
+    }
+    .secao-container-home {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-smartcoop {
+        margin-right: 0px;
+    }
+    .btn-safeagro {
+        margin-top: 20px;
+    }
+}
+
+//********************** Footer **************************
+.footer-copyright-home {
+    background: #05dff8;
+}
+.footer-copyright-home p {
+    margin-bottom: 0;
+    color: #000000;
+}

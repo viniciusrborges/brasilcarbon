@@ -1,0 +1,20 @@
+.section-iframe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-iframe-style {
+  padding: 20px 0px 0px;
+  width: 600px;
+  height: 550px;
+}
+
+.btn-close-auth {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  padding: 20px 0px 0px;
+}
+.Toastify__toast--error {
+  width: 400px;
+}
